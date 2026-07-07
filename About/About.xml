@@ -1,0 +1,30 @@
+<ModMetaData>
+        <packageId>1tzMara.agevanity</packageId>
+        <name>Age vanity</name>
+        <author>1tzMara</author>
+        <description>
+            Simple mod that adds a wrinkles overlay to all pawns over the age of 50 (age can be defined in the mod settings)
+        </description>
+        <supportedVersions>
+            <li>1.6</li>
+        </supportedVersions>
+        <modDependencies>
+        <li>
+            <packageId>ludeon.rimworld</packageId>
+            <displayName>Core</displayName>
+        </li>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+        </li>
+        </modDependencies>
+        <loadAfter>
+            <li>brrainz.harmony</li>
+            <li>ludeon.rimworld</li>
+            <li>ludeon.rimworld.royalty</li>
+            <li>ludeon.rimworld.biotech</li>
+            <li>ludeon.rimworld.anomaly</li>
+            <li>ludeon.rimworld.odyssey</li>
+            <li>ludeon.rimworld.ideology</li>
+        </loadAfter>
+    </ModMetaData>

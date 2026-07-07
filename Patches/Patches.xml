@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <!-- patch for [NL] Facial animation WIP -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[NL] Facial Animation - WIP</li> 
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="ar_rhytides"]/renderNodeProperties/li/texPath</xpath>
+            <value>
+                <texPath>Things/Pawn/Humanlike/Overlay/hd/rhytid_overlay</texPath>
+            </value>
+        </match>
+    </Operation>
+    <!-- Patches to add rhytides to immunity lists of genes -->
+
+    <!-- PMP - Mechanoid gene -->
+    <Operation Class="PatchOperationFindMod" MayRequire="Ludeon.RimWorld.Biotech">
+        <mods>
+            <li>Persona Mechanoid Pawns 2</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="PMP_PersonaMechanoid"]/modExtensions/li[@Class="Persona_Pawns.PMP_GeneExtension"]/blockedHediffs</xpath>
+                    <value>
+                        <li>ar_rhytides</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+
+</Patch>

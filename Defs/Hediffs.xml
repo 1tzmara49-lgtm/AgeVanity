@@ -1,0 +1,36 @@
+<Defs>
+    <!-- Note that this hediff is applied on pawn's birthday/spawn if they're over 50 years old biologically-->
+    <HediffDef ParentName="ChronicDiseaseBase">
+        <defName>ar_rhytides</defName>
+        <label>rhytides</label>
+        <labelNoun>rhytides</labelNoun>
+        <hediffClass>Hediff</hediffClass>
+        <description>Decline in skin's structural integrity. Harmless.</description>
+        <stages>
+            <li>
+                <becomeVisible>true</becomeVisible>
+            </li>
+        </stages>
+        <renderNodeProperties>
+            <li>
+                <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+                <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+                <texPath>Things/Pawn/Humanlike/Overlay/rhytid_overlay</texPath>
+                <parentTagDef>Head</parentTagDef>
+                <useSkinShader>true</useSkinShader>
+                <useRottenColor>true</useRottenColor>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <useSkinShader>true</useSkinShader>
+                <colorType>Skin</colorType>
+                <drawData>  
+                    <defaultData>
+                        <layer>51</layer> <!-- Less than 52, more than 50 -->
+                    </defaultData>
+                    <dataNorth>
+                        <layer>10</layer>
+                    </dataNorth>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </HediffDef>
+</Defs>
